@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtar Changing</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>What does your name say about your personality</h1>
+    <div class="mainitem">
+     <p>  Enter Your name </p>
+     <input type="text" id="nameinp" name="sname"><br>
+     
+    <div class="imageclass">
+        <img src="image.svg" width="200" height="200" id="imgchange">
+        <button type="button" class="clickme"> Click Me</button>
+    </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $('.clickme').click(function(){
+            const name = $('#nameinp').val();
+            //console.log(name);
+            $('#imgchange').attr('src' , `https://joeschmoe.io/api/v1/${name}`);
+        })
+    })
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
